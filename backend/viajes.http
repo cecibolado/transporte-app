@@ -1,0 +1,57 @@
+@url=http://localhost:3000
+@token=REPLACE_WITH_JWT
+
+### Listado de viajes
+GET {{url}}/viajes
+
+### Listado de viajes filtrando por vehículo
+GET {{url}}/viajes?vehiculo_id=1
+
+### Listado de viajes filtrando por conductor
+GET {{url}}/viajes?conductor_id=2
+
+### Listado de viajes filtrando por origen
+GET {{url}}/viajes?origen=Buenos
+
+### Listado de viajes filtrando por destino
+GET {{url}}/viajes?destino=Rosario
+
+### Listado de viajes por rango de fechas
+GET {{url}}/viajes?fechaDesde=2025-01-01&fechaHasta=2025-12-31
+
+### Detalle de un viaje por ID
+GET {{url}}/viajes/1
+
+### Crear viaje
+POST {{url}}/viajes
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "vehiculo_id": 1,
+  "conductor_id": 2,
+  "fecha_salida": "2025-11-14T08:00:00Z",
+  "fecha_llegada": "2025-11-14T12:00:00Z",
+  "origen": "Buenos Aires",
+  "destino": "Rosario",
+  "kilometros": 300
+}
+
+### Modificar viaje
+PUT {{url}}/viajes/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "vehiculo_id": 1,
+  "conductor_id": 2,
+  "fecha_salida": "2025-11-14T09:00:00Z",
+  "fecha_llegada": "2025-11-14T13:00:00Z",
+  "origen": "Buenos Aires",
+  "destino": "Rosario",
+  "kilometros": 305
+}
+
+### Eliminar viaje
+DELETE {{url}}/viajes/1
+Authorization: Bearer {{token}}
