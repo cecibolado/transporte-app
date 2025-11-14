@@ -1,0 +1,38 @@
+@url=http://localhost:3000
+@token=REPLACE_WITH_JWT
+
+### Listado de conductores
+GET {{url}}/conductores
+
+### Detalle de conductor por ID
+GET {{url}}/conductores/1
+
+### Crear conductor
+POST {{url}}/conductores
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "dni": "12345678",
+  "licencia": "B123456",
+  "licencia_vencimiento": "2026-05-30"
+}
+
+### Modificar conductor
+PUT {{url}}/conductores/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "dni": "12345678",
+  "licencia": "B123456",
+  "licencia_vencimiento": "2027-05-30"
+}
+
+### Eliminar conductor
+DELETE {{url}}/conductores/1
+Authorization: Bearer {{token}}
