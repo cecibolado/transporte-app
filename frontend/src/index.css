@@ -1,0 +1,75 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 1.2rem;
+  background: var(--card-background-color);
+  border-bottom: 1px solid var(--muted-border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.content {
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- CARD GLOBAL PARA FORMULARIOS Y LISTAS --- */
+.card {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background: var(--card-background-color);
+  box-shadow: var(--card-box-shadow);
+  margin-bottom: 2rem;
+}
+
+/* --- TABLAS MEJORADAS --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table thead {
+  background: var(--card-border-color);
+}
+
+table th,
+table td {
+  padding: 0.7rem;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background: rgba(0,0,0,0.03);
+}
+
+table tr:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* --- BOTONES --- */
+button,
+a[role="button"] {
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+button:hover,
+a[role="button"]:hover {
+  transform: translateY(-1px);
+}
+
+/* Botón peligro */
+.btn-danger {
+  background: #c0392b;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #e74c3c;
+}
