@@ -1,0 +1,50 @@
+@url=http://localhost:3000
+@token=REPLACE_WITH_JWT
+
+### Listado de vehiculos
+GET {{url}}/vehiculos
+
+### Listado de vehiculos con filtro de marca
+GET {{url}}/vehiculos?marca=Toyota
+
+### Listado de vehiculos con filtro de modelo
+GET {{url}}/vehiculos?modelo=Corolla
+
+### Listado de vehiculos con filtro de patente
+GET {{url}}/vehiculos?patente=ABC123
+
+### Listado de vehiculos con filtro de año
+GET {{url}}/vehiculos?desde=2020-01-01&hasta=2025-12-31
+
+### Listado de vehiculos con filtro de capacidad de carga
+GET {{url}}/vehiculos?capacidad_carga=1000
+
+### Crear vehiculo
+POST {{url}}/vehiculos
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "marca": "Toyota",
+    "modelo": "Ethios",
+    "patente": "ABC123",
+    "ano": "2025-11-14",
+    "capacidad_carga": 1500
+}
+
+### Modificar vehiculo
+PUT {{url}}/vehiculos/10
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "marca": "Toyota",
+    "modelo": "Ethios",
+    "patente": "ABC123",
+    "ano": "2025-11-14",
+    "capacidad_carga": 1500
+}
+
+### Quitar vehiculo
+DELETE {{url}}/vehiculos/10
+Authorization: Bearer {{token}}
